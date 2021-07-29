@@ -3,8 +3,8 @@
 <hr>
 <h2>GOAL OF THIS PROJECT:</h2> 
 Create a service for registering drivers in the taxi system and assigning drivers to cars. In this application, you can
-create / read / update / delete drivers or cars, manage their relationship. <br>
-Implemented N-tier architecture, the ability to authenticate by login / password and logging of the application.
+create / read / update / delete drivers or cars, manage their relationship, authenticate by login / password and logging of the application. <br>
+Implemented N-tier architecture, SOLID and OOP principles.
 <hr>
 <h2>TECHNOLOGIES USED:</h2>
 <ul>
@@ -14,7 +14,6 @@ Implemented N-tier architecture, the ability to authenticate by login / password
   <li>JSTL</li>
   <li>JDBC</li>
   <li>MySQL</li>
-  <li>Custom injector</li>
   <li>Tomcat 9.0.50</li>
   <li>Maven</li>
   <li>Maven Checkstyle Plugin</li>
@@ -27,10 +26,12 @@ Implemented N-tier architecture, the ability to authenticate by login / password
 <li> To run the project on your local machine, clone this project into your local folder and open the project in an IDE </li>
 <li> Install MySQL and MySQL Workbench, to configure MySQL you can use the script from resources/init_db.sql </li>
 <li> Configure connection to your database in src/main/java/taxi/util/ConnectionUtil.java: <br>
-    URL TO YOUR LOCAL DB - jdbc:mysql://localhost:3306/<b>database_name</b>?useLegacyDatetimeCode=false&serverTimezone=UTC <br>
+    URL TO YOUR LOCAL DB - jdbc:mysql://localhost:3306/<b>database_name</b>?useLegacyDatetimeCode=false&serverTimezone=UTC
+    where database_name name of scheme in your database<br>
     YOUR USERNAME - MySQL username <br>
     YOUR PASSWORD - MySQL password <br>
     JDBC_DRIVER - com.mysql.cj.jdbc.Driver <br> </li>
+<li> In src/main/resources/log4j2.xml enter your absolute path where you want your log file to be stored, e.g. C:\Users\Admin\IdeaProjects\taxi-service\logs\app.log </li>
 <li> Install and configure Local Tomcat Server (set "/" in Deployment - taxi-service:war exploded - Application context) </li>
 <li> Run your project, in browser you will see login page with possibility to register a new user(drier) - click register </li>
 <li> Fill in empty fields on this page -> click Submit </li>
